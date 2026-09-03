@@ -48,11 +48,11 @@
 
   /* Syntax theme: red for keywords/symbols, grey for comments. */
   --code-fg: #2a2a2a;
-  --code-kw: #b0272d;      /* keywords, operators, punctuation */
+  --code-kw: #fb1818;      /* keywords, operators, punctuation */
   --code-str: #6b6b6b;
   --code-comment: #999;
   --code-fn: #1a1a1a;
-  --code-num: #b0272d;
+  --code-num: #fb1818;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,11 +66,11 @@
     --rule-soft: #333;
 
     --code-fg: #d8d8d8;
-    --code-kw: #e05a5f;
+    --code-kw: #fb1818;
     --code-str: #aaa;
     --code-comment: #777;
     --code-fn: #e4e4e4;
-    --code-num: #e05a5f;
+    --code-num: #fb1818;
   }
 }
 
@@ -87,8 +87,8 @@ body {
   margin: 0;
 }
 
-a { color: var(--ink); text-decoration-color: var(--ink-muted); }
-a:hover { background: var(--ink); color: var(--bg); text-decoration: none; }
+a { color: var(--code-kw); text-decoration: none; }
+a:hover { background: var(--code-kw); color: var(--bg); text-decoration: none; }
 
 img, video { max-width: 100%; height: auto; }
 
@@ -115,11 +115,13 @@ img, video { max-width: 100%; height: auto; }
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-.site-title:hover { background: none; color: var(--ink); }
+.site-title:hover { background: none; color: var(--code-kw); }
 
 .site-nav { display: flex; flex-direction: column; gap: 0.4rem; font-size: var(--fs-small); }
-.site-nav a { color: var(--ink-light); padding: 0.15rem 0; }
-.site-nav a.active { color: var(--ink); font-weight: 700; }
+.site-nav a { color: var(--code-kw); padding: 0.15rem 0; }
+.site-nav a.active { color: var(--code-kw); font-weight: 700; font-style: italic; }
+.site-nav a:hover,
+.site-nav a.active:hover { background: var(--code-kw); color: var(--bg); }
 
 main.content { flex: 1 1 auto; min-width: 0; }
 
@@ -149,10 +151,11 @@ main.content { flex: 1 1 auto; min-width: 0; }
 }
 .post-gutter-right nav ul { list-style: none; margin: 0; padding: 0; }
 .post-gutter-right nav li { margin-bottom: 0.4rem; }
-.post-gutter-right nav a { color: var(--ink-light); }
-.post-gutter-right nav a:hover { background: none; color: var(--ink); text-decoration: underline; }
+.post-gutter-right nav a { color: var(--code-kw); }
+.post-gutter-right nav a:hover { background: var(--code-kw); color: var(--bg); }
 
 .post-body { grid-column: 2; min-width: 0; overflow: visible; }
+.post-body > :first-child { margin-top: 0; }
 
 /* ---------- sidenotes ---------- */
 /* Numbered marker inline in the text; note text overflows .post-body to the
@@ -196,7 +199,7 @@ main.content { flex: 1 1 auto; min-width: 0; }
 }
 .post-body { counter-reset: sidenote sidenote-display; }
 
-h1 { font-size: 1.5em; margin: 0 0 2rem; max-width: none; }
+h1 { font-size: 1.5em; margin: 0 0 5.1rem; max-width: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--mono);
@@ -234,8 +237,13 @@ blockquote {
   color: var(--ink-light);
 }
 
-table { border-collapse: collapse; }
-th, td { border: 1px solid var(--rule-soft); padding: 0.3rem 0.6rem; text-align: left; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: none; padding: 0.5rem 1rem; text-align: left; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+thead th { border-bottom: 1px solid var(--ink); text-transform: uppercase; letter-spacing: 0.05em; font-size: var(--fs-small); font-weight: 600; }
+tbody tr { border-bottom: 1px solid var(--rule-soft); }
+tbody tr:last-child { border-bottom: 1px solid var(--ink); }
 .table-caption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; max-width: var(--measure); }
 
 .post-body li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.2rem; margin-bottom: 0.3rem; }
@@ -297,7 +305,22 @@ p code, li code { background: var(--bg-code); padding: 0.05em 0.3em; white-space
 .tags { list-style: none; padding: 0; display: inline; }
 .tags li { display: inline; }
 .tags li::after { content: ' '; }
-.tags a { color: var(--ink-muted); }
+.tags a { color: var(--code-kw); }
+.tags a:hover { background: var(--code-kw); color: var(--bg); }
+
+.draft-label {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--code-kw);
+  background: color-mix(in srgb, var(--code-kw) 10%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--code-kw) 40%, var(--bg));
+  border-radius: 3px;
+  padding: 0.05em 0.4em;
+  vertical-align: middle;
+}
 
 footer.site-footer {
   margin-top: 4rem;
@@ -306,7 +329,8 @@ footer.site-footer {
   font-size: var(--fs-small);
   color: var(--ink-muted);
 }
-footer.site-footer nav a { margin-right: 1rem; color: var(--ink-muted); }
+footer.site-footer nav a { margin-right: 1rem; color: var(--code-kw); }
+footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
 
 /* ---------- responsive: collapse gutters below the post grid's natural width ---------- */
 
@@ -340,4 +364,56 @@ footer.site-footer nav a { margin-right: 1rem; color: var(--ink-muted); }
   }
   .sidenote-toggle:checked + .sidenote { display: block; }
   .sidenote-ref { text-decoration: underline dotted; }
+}
+
+/* ---------- home page ---------- */
+
+.home-tagline {
+  color: var(--ink-muted);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.home-intro p { margin: 0 0 1.1rem; }
+
+/* Link column in the left gutter, mirroring the reference site's
+   Email / GitHub / LinkedIn strip. Bracketed so it reads as a nav
+   rather than prose at a monospace glance. */
+.home-links {
+  margin: 0;
+  font-size: var(--fs-small);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.home-links a { color: var(--code-kw); display: inline-flex; align-items: center; gap: 0.35em; }
+.home-links a::before { content: '['; color: var(--ink-muted); order: -1; }
+.home-links a::after { content: ']'; color: var(--ink-muted); }
+.home-links a:hover { background: var(--code-kw); color: var(--bg); }
+.home-links-icon { width: 1em; height: 1em; flex: none; }
+
+/* Role/education entries: date term in a narrow left column, body beside it.
+   Falls back to stacked blocks on narrow screens. */
+.home-roles { margin: 0; }
+.home-roles dt {
+  float: left;
+  clear: left;
+  width: 5.5em;
+  color: var(--ink-muted);
+  font-size: var(--fs-small);
+  line-height: calc(var(--lh) * var(--fs) / var(--fs-small));
+}
+.home-roles dd {
+  margin: 0 0 1.2rem 5.5em;
+}
+.home-roles dd:last-child { margin-bottom: 0; }
+.home-roles dd em {
+  display: block;
+  margin: 0.3em 0 0.6em;
+  color: var(--ink-light);
+}
+
+@media (max-width: 560px) {
+  .home-roles dt { float: none; width: auto; }
+  .home-roles dd { margin-left: 0; margin-bottom: 1.5rem; }
 }

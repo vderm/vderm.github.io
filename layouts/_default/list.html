@@ -5,7 +5,7 @@
   {{ range .Pages.ByDate.Reverse }}
   <li>
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-    &mdash; <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    &mdash; <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Draft }} <span class="draft-label">Draft</span>{{ end }}
     {{ with .Description }}<div class="post-meta">{{ . }}</div>{{ end }}
   </li>
   {{ else }}

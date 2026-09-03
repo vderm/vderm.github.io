@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article>
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}{{ if .Draft }} <span class="draft-label">Draft</span>{{ end }}</h1>
 
   <div class="post-grid">
     <div class="post-gutter-left">

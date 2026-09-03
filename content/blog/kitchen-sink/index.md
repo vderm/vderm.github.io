@@ -6,7 +6,7 @@ description: "Every content feature the template supports, in one page."
 tags: ["meta", "demo"]
 author: "Vasken Dermardiros"
 math: true
-draft: false
+draft: true
 ---
 
 This page exists to demo every content feature the template supports, in one
@@ -143,12 +143,12 @@ $$
 
 ## Table
 
-| Component | Qty | Cost (EUR) |
-|---|---:|---:|
-| Robot arm | 1 | 2,400 |
-| Wrist camera | 1 | 180 |
-| Stationary camera | 1 | 220 |
-| Space mouse | 1 | 90 |
+| Component         |  Qty | Cost (EUR) |
+| ----------------- | ---: | ---------: |
+| Robot arm         |    1 |      2,400 |
+| Wrist camera      |    1 |        180 |
+| Stationary camera |    1 |        220 |
+| Space mouse       |    1 |         90 |
 
 <p class="table-caption">Table 1. Rough bill of materials, for scale — caption sits under the table, not in a footnote.</p>
 
