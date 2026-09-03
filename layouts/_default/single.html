@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="post-grid">
+  <h1>{{ .Title }}</h1>
+
+  <div class="post-meta-mobile">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
+    {{ with .Params.tags }}
+    &middot; <ul class="tags">{{ range . }}<li><a href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">#{{ . }}</a></li>{{ end }}</ul>
+    {{ end }}
+  </div>
+
+  <div class="post-gutter-left">
+    {{ with .Params.author }}<div class="byline">{{ . }}</div>{{ end }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
+    {{ with .Params.tags }}
+    <ul class="tags">{{ range . }}<li><a href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">#{{ . }}</a></li>{{ end }}</ul>
+    {{ end }}
+  </div>
+
+  <div class="post-body">
+    {{ .Content }}
+  </div>
+
+  <div class="post-gutter-right">
+    {{ if .Fragments.Headings }}
+    <div class="toc-label">On this page</div>
+    {{ partial "toc.html" . }}
+    {{ end }}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Blog on Vasken Dermardiros</title>
+		<link>https://vderm.github.io/blog/</link>
+		<description>Recent content in Blog on Vasken Dermardiros</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://vderm.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Kitchen sink</title>
+				<link>https://vderm.github.io/blog/2026/kitchen-sink/</link>
+				<pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://vderm.github.io/blog/2026/kitchen-sink/</guid>
+				<description>&lt;p&gt;This page exists to demo every content feature the template supports, in one&#xA;place, so the render can be checked at a glance instead of one post at a&#xA;time. Nothing here is real content.&lt;/p&gt;&#xA;&lt;p&gt;Plain paragraph text, to check the base measure, line height, and how a run&#xA;of text wraps at the column width. A sidenote here checks gutter&#xA;placement.&lt;label for=&#34;sn-9f2ee933f2722853b10358aadc881d9f-0&#34; class=&#34;sidenote-ref&#34;&gt;&lt;/label&gt;&#xA;&lt;input type=&#34;checkbox&#34; id=&#34;sn-9f2ee933f2722853b10358aadc881d9f-0&#34; class=&#34;sidenote-toggle&#34;&gt;&#xA;&lt;span class=&#34;sidenote&#34;&gt;This is a sidenote — it should sit in the left gutter,&#xA;aligned near this paragraph, not stacked at the top of the page.&lt;/span&gt;&#xA;&#xA;&lt;strong&gt;Bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, and &lt;code&gt;inline code&lt;/code&gt; should all be visually distinct from&#xA;plain text and from each other.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
