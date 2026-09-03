@@ -404,13 +404,20 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
   line-height: calc(var(--lh) * var(--fs) / var(--fs-small));
 }
 .home-roles dd {
+  position: relative;
   margin: 0 0 1.2rem 5.5em;
 }
 .home-roles dd:last-child { margin-bottom: 0; }
-.home-roles dd em {
-  display: block;
-  margin: 0.3em 0 0.6em;
-  color: var(--ink-light);
+
+/* Company blurbs pinned to the top of their role entry, in the left
+   gutter, rather than relying on sidenote float order (which breaks
+   inside a dl where dt is also floated). */
+.home-roles .sidenote {
+  position: absolute;
+  float: none;
+  top: 0;
+  left: calc(-1 * (var(--gutter) + var(--gap) + 5.5em) - 10px);
+  margin: 0;
 }
 
 @media (max-width: 560px) {
