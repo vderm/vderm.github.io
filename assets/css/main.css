@@ -218,7 +218,7 @@ h4 { font-size: 1em; margin-top: 1.5em; }
 p, ul, ol, blockquote, table { max-width: var(--measure); word-wrap: break-word; }
 
 figure { margin: 2rem 0; max-width: var(--measure); }
-figcaption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; }
+figcaption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; font-style: italic; }
 
 .figure-row-images { display: flex; gap: 1rem; }
 .figure-row-images img { flex: 1 1 0; min-width: 0; }
@@ -244,7 +244,7 @@ th:last-child, td:last-child { padding-right: 0; }
 thead th { border-bottom: 1px solid var(--ink); text-transform: uppercase; letter-spacing: 0.05em; font-size: var(--fs-small); font-weight: 600; }
 tbody tr { border-bottom: 1px solid var(--rule-soft); }
 tbody tr:last-child { border-bottom: 1px solid var(--ink); }
-.table-caption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; max-width: var(--measure); }
+.table-caption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; max-width: var(--measure); font-style: italic; }
 
 .post-body li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.2rem; margin-bottom: 0.3rem; }
 .post-body input[type="checkbox"] { margin-right: 0.5em; accent-color: var(--code-kw); }
