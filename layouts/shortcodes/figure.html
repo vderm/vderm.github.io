@@ -1,0 +1,8 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" -}}
+{{- $page := .Page -}}
+<figure>
+  <img src="{{ $src }}" alt="{{ $alt }}">
+  {{- with $caption }}<figcaption>{{ $page.RenderString . }}</figcaption>{{ end -}}
+</figure>

@@ -1,0 +1,7 @@
+<aside class="sidebar">
+  <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+  <nav class="site-nav">
+    <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Home</a>
+    <a href="{{ "/blog/" | relURL }}"{{ if or (eq .Section "blog") (eq .Kind "term") }} class="active"{{ end }}>Blog</a>
+  </nav>
+</aside>

@@ -1,0 +1,4 @@
+{{- $id := printf "sn-%s-%d" (.Page.File.UniqueID) .Ordinal -}}
+<label for="{{ $id }}" class="sidenote-ref"></label>
+<input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
+<span class="sidenote">{{ .Inner | .Page.RenderString }}</span>

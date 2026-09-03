@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vderm.github.io/sitemap.xml
