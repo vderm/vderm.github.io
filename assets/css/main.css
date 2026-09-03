@@ -132,9 +132,12 @@ main.content { flex: 1 1 auto; min-width: 0; }
   align-items: start;
 }
 
-.post-gutter-left { font-size: var(--fs-small); color: var(--ink-muted); }
-.post-gutter-left .byline { margin-bottom: 0.5rem; }
-.post-gutter-left time { display: block; color: var(--ink-muted); }
+.post-gutter-left {
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+}
+.post-gutter-left .byline { margin-bottom: 0.3rem; }
+.post-gutter-left time { display: block; margin-bottom: 0.4rem; }
 
 .post-gutter-right { font-size: var(--fs-small); position: sticky; top: 2.5rem; }
 .post-gutter-right .toc-label {
@@ -193,8 +196,7 @@ main.content { flex: 1 1 auto; min-width: 0; }
 }
 .post-body { counter-reset: sidenote sidenote-display; }
 
-h1 { font-size: 1.5em; margin: 0 0 1.5rem; }
-.post-body h1 { grid-column: 1 / -1; }
+h1 { font-size: 1.5em; margin: 0 0 2rem; max-width: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--mono);
@@ -316,9 +318,15 @@ footer.site-footer nav a { margin-right: 1rem; color: var(--ink-muted); }
 
 @media (max-width: 900px) {
   .post-grid { grid-template-columns: 1fr; }
-  .post-body { grid-column: 1; }
-  .post-gutter-left, .post-gutter-right { display: none; }
-  .post-meta-mobile { display: block !important; }
+  .post-gutter-right { display: none; }
+
+  /* The left gutter holds author/date/tags, not just sidenote overflow —
+     keep it, but stack it above the prose as a normal block instead of a
+     side-by-side grid column (which no longer exists at this width). */
+  .post-gutter-left { grid-column: 1; grid-row: 1; margin-bottom: 2rem; }
+  .post-gutter-left .tags { display: block; margin-top: 0.3rem; }
+  .post-gutter-left .tags li { display: inline-block; margin-bottom: 0.2rem; }
+  .post-body { grid-column: 1; grid-row: 2; }
 
   /* Gutters are gone, so the sidenote's float target no longer exists;
      collapse to a tap-to-reveal note inline instead. */
@@ -333,5 +341,3 @@ footer.site-footer nav a { margin-right: 1rem; color: var(--ink-muted); }
   .sidenote-toggle:checked + .sidenote { display: block; }
   .sidenote-ref { text-decoration: underline dotted; }
 }
-
-.post-meta-mobile { display: none; font-size: var(--fs-small); color: var(--ink-muted); margin-bottom: 2rem; }
