@@ -398,14 +398,14 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
 .home-roles dt {
   float: left;
   clear: left;
-  width: 5.5em;
+  width: 6.25em;
   color: var(--ink-muted);
   font-size: var(--fs-small);
   line-height: calc(var(--lh) * var(--fs) / var(--fs-small));
 }
 .home-roles dd {
   position: relative;
-  margin: 0 0 1.2rem 5.5em;
+  margin: 0 0 1.2rem 6.75em;
 }
 .home-roles dd:last-child { margin-bottom: 0; }
 
@@ -416,7 +416,7 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
   position: absolute;
   float: none;
   top: 0;
-  left: calc(-1 * (var(--gutter) + var(--gap) + 5.5em) - 10px);
+  left: calc(-1 * (var(--gutter) + var(--gap) + 6.75em) - 10px);
   margin: 0;
 }
 
