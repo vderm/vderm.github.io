@@ -215,7 +215,7 @@ h3::after { content: ' '; display: block; border-top: 1px solid var(--rule-soft)
 
 h4 { font-size: 1em; margin-top: 1.5em; }
 
-p, ul, ol, blockquote, table { max-width: var(--measure); word-wrap: break-word; }
+p, ul, ol, dl, blockquote, table { max-width: var(--measure); word-wrap: break-word; }
 
 figure { margin: 2rem 0; max-width: var(--measure); }
 figcaption { color: var(--ink-muted); font-size: var(--fs-small); margin-top: 0.5rem; font-style: italic; }
@@ -393,8 +393,11 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
 .home-links-icon { width: 1em; height: 1em; flex: none; }
 
 /* Role/education entries: date term in a narrow left column, body beside it.
-   Falls back to stacked blocks on narrow screens. */
-.home-roles { margin: 0; }
+   Falls back to stacked blocks on narrow screens. The dl is allowed past
+   --measure by exactly the dt indent, so the dd text (which starts 6.75em in)
+   still ends on the same right edge as the paragraphs above it. Capping the dd
+   rather than the dl keeps that edge exact even when the column is narrower. */
+.home-roles { margin: 0; max-width: none; }
 .home-roles dt {
   float: left;
   clear: left;
@@ -406,6 +409,7 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
 .home-roles dd {
   position: relative;
   margin: 0 0 1.2rem 6.75em;
+  max-width: calc(var(--measure) - 6.75em);
 }
 .home-roles dd:last-child { margin-bottom: 0; }
 
@@ -422,7 +426,7 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
 
 @media (max-width: 560px) {
   .home-roles dt { float: none; width: auto; }
-  .home-roles dd { margin-left: 0; margin-bottom: 1.5rem; }
+  .home-roles dd { margin-left: 0; margin-bottom: 1.5rem; max-width: var(--measure); }
 }
 
 /* Below 900px the gutter column the absolute-positioned blurb targets no
