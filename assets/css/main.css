@@ -424,3 +424,21 @@ footer.site-footer nav a:hover { background: var(--code-kw); color: var(--bg); }
   .home-roles dt { float: none; width: auto; }
   .home-roles dd { margin-left: 0; margin-bottom: 1.5rem; }
 }
+
+/* Below 900px the gutter column the absolute-positioned blurb targets no
+   longer exists (see the .post-grid collapse above); fall back to the same
+   tap-to-reveal inline block the post sidenotes use. Declared after the
+   base .home-roles .sidenote rule above so it wins at this width despite
+   higher selector specificity than the generic mobile .sidenote override,
+   and re-applies that override's spacing/border since specificity would
+   otherwise let this rule's own `margin: 0` win instead. */
+@media (max-width: 900px) {
+  .home-roles .sidenote {
+    position: static;
+    left: auto;
+    top: auto;
+    margin: 0.75rem 0 0.75rem 1rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--rule-soft);
+  }
+}

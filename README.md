@@ -14,6 +14,13 @@ script, which then builds and commits.
 | `assets/css/main.css` | Styles (hand-maintained)                                        |
 | `docs/`               | **Generated.** Built site, committed and served by GitHub Pages |
 
+## Home page
+
+`layouts/index.html` is the template for the site root (`/`) — Hugo's convention for
+the home page. It's hand-authored, not generated: name, tagline, contact links, bio,
+career timeline (Now/Previously), education, publications, and the latest posts list
+(pulled from `content/blog/`). Edit it directly to update any of that content.
+
 ## Publishing
 
 GitHub Pages: Settings → Pages → Source "Deploy from a branch", branch `master`,
@@ -29,6 +36,8 @@ hugo server -D    # preview at localhost:1313, includes drafts
 Then commit `content/blog/` and `docs/` together.
 
 ## Contract for the exporter
+
+The exporter itself lives in the vault repo: `vault/scripts/blog/export_blog.py` (see `vault/scripts/blog/README.md` for the full transform table).
 
 Each post is one markdown file in `content/blog/` with this frontmatter:
 
@@ -50,11 +59,13 @@ no separate index needs writing.
 
 The exporter is responsible for:
 
-- selecting posts (the `publish` field in the vault, mapped to `draft` here)
-- rewriting `[[wikilinks]]` into real relative links or plain text — Hugo does not
-  understand them
-- copying `attachments/<slug>/` images alongside the post and rewriting image paths
-  to match
+- selecting posts (any vault file with `type: blog` in its frontmatter, under
+  `projects/` or `notes/`) and reading `draft` straight through
+- rewriting `[[wikilinks]]` into real relative links (when the target is
+  itself an exported post) or plain text otherwise — Hugo does not understand
+  wikilink syntax
+- copying images (`![[embed]]` or `attachments/<file>/x.png`) alongside the
+  post and rewriting their paths to match
 
 ### Page bundles for posts with images
 
