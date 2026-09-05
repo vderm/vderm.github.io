@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Blog on Vasken Dermardiros</title>
-		<link>https://vderm.github.io/blog/</link>
-		<description>Recent content in Blog on Vasken Dermardiros</description>
+		<title>Blogs on Vasken Dermardiros</title>
+		<link>http://localhost:1313/blog/</link>
+		<description>Recent content in Blogs on Vasken Dermardiros</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
 		
 		
 		
-			<atom:link href="https://vderm.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+			<lastBuildDate>Sat, 05 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Blog Demo</title>
+				<link>http://localhost:1313/blog/2026/blog-demo/</link>
+				<pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/2026/blog-demo/</guid>
+				<description>&lt;p&gt;Well, what&amp;rsquo;s the point of this page? It&amp;rsquo;s mainly to showcase what things look like on the blog. Think of it as my QA.&lt;/p&gt;&#xA;&lt;p&gt;Markdown is fine, but it&amp;rsquo;s a mess too: two ways of declaring headers (&lt;code&gt;# Header&lt;/code&gt; or &lt;code&gt;Header \n =====&lt;/code&gt;, well, let&amp;rsquo;s pretend you can do the newline in your head), I don&amp;rsquo;t get why &lt;code&gt;*&lt;/code&gt; is &lt;em&gt;italic&lt;/em&gt; but there&amp;rsquo;s also the &lt;code&gt;_&lt;/code&gt; as well. I like the &lt;code&gt;_&lt;/code&gt;. We could&amp;rsquo;ve kept the &lt;code&gt;*&lt;/code&gt; for bold instead of &lt;code&gt;**&lt;/code&gt; for bold. And, things get weird if you want the use &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;. Then they added some pseudo-$\LaTeX$ stuff with the &lt;code&gt;$&lt;/code&gt; signs. Whatever. I like text. I would&amp;rsquo;ve used &lt;a href=&#34;https://orgmode.org/features.html&#34;&gt;org-mode&lt;/a&gt; since they&amp;rsquo;re more logical on things (like the &lt;a href=&#34;https://orgmode.org/manual/Emphasis-and-Monospace.html&#34;&gt;italic-bold&lt;/a&gt;), but it doesn&amp;rsquo;t play nice outside of Emacs. And Emacs&lt;label for=&#34;sn-d98082508d82ef116a3e2ef72da527a2-0&#34; class=&#34;sidenote-ref&#34;&gt;&lt;/label&gt;&#xA;&lt;input type=&#34;checkbox&#34; id=&#34;sn-d98082508d82ef116a3e2ef72da527a2-0&#34; class=&#34;sidenote-toggle&#34;&gt;&#xA;&lt;span class=&#34;sidenote&#34;&gt;I wrote my thesis in &lt;a href=&#34;https://www.spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; on a super crappy &lt;a href=&#34;https://www.notebookcheck.net/Chuwi-LapBook-12-3-Celeron-2K-IPS-Laptop-Review.258398.0.html&#34;&gt;Chuwi laptop&lt;/a&gt; that was using a Microsoft Surface screen! Honestly, the constraints made it all work! My stronger PC was running Windows, so it got weird having to work in Linux and Windows.&lt;/span&gt;&#xA; never ran well on Windows.&lt;/p&gt;</description>
+			</item>
 	</channel>
 </rss>
