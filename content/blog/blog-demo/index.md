@@ -67,11 +67,11 @@ Task list:
 
 A single figure with a caption underneath (not in the footnotes):
 
-![Figure 1. A placeholder image, standing in for a real photo or diagram.](single-figure.png)
+{{< figure src="single-figure.webp" alt="" caption="Figure 1. A placeholder image, standing in for a real photo or diagram." >}}
 
 Two images side by side, sharing one caption underneath:
 
-{{< figures src1="side-a.png" alt1="Placeholder A" src2="side-b.png" alt2="Placeholder B" caption="Figure 2. Two related views side by side — e.g. before/after, or two camera angles." >}}
+{{< figures src1="side-a.webp" alt1="Placeholder A" src2="side-b.webp" alt2="Placeholder B" caption="Figure 2. Two related views side by side — e.g. before/after, or two camera angles." >}}
 
 ## Video
 
