@@ -18,7 +18,7 @@
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
-  function open(src, alt) {
+  function open(src, alt, caption) {
     if (overlay) return;
     lastFocused = document.activeElement;
 
@@ -26,14 +26,28 @@
     overlay.className = 'lightbox';
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
-    overlay.setAttribute('aria-label', alt ? alt : 'Full size image');
+    // The caption names the image better than alt, which is often empty.
+    overlay.setAttribute('aria-label', caption || alt || 'Full size image');
     overlay.tabIndex = -1;
+
+    // Figure wrapper, so the caption tracks the scaled image's width rather
+    // than the full width of the overlay.
+    var fig = document.createElement('figure');
 
     var full = document.createElement('img');
     full.src = src;
     full.alt = alt || '';
-    overlay.appendChild(full);
+    fig.appendChild(full);
 
+    if (caption) {
+      var cap = document.createElement('figcaption');
+      // textContent, not innerHTML: captions are rendered markup upstream and
+      // are not re-injected here.
+      cap.textContent = caption;
+      fig.appendChild(cap);
+    }
+
+    overlay.appendChild(fig);
     document.body.appendChild(overlay);
     // Lock scroll behind the overlay.
     document.body.style.overflow = 'hidden';
@@ -46,16 +60,26 @@
     overlay.focus();
   }
 
+  // The caption belongs to the enclosing <figure>, which may be the image's
+  // parent or a level up when figures are laid out side by side.
+  function captionFor(img) {
+    var fig = img.closest ? img.closest('figure') : null;
+    if (!fig) return '';
+    var cap = fig.querySelector('figcaption');
+    return cap ? cap.textContent.trim() : '';
+  }
+
   Array.prototype.forEach.call(imgs, function (img) {
-    img.addEventListener('click', function () {
-      open(img.currentSrc || img.src, img.alt);
-    });
+    function show() {
+      open(img.currentSrc || img.src, img.alt, captionFor(img));
+    }
+    img.addEventListener('click', show);
     // Reachable without a mouse.
     img.tabIndex = 0;
     img.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        open(img.currentSrc || img.src, img.alt);
+        show();
       }
     });
   });
