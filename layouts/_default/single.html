@@ -28,4 +28,9 @@
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
 {{ end }}
 {{ end }}
+{{ if strings.Contains .Content "<figure" }}
+{{ with resources.Get "js/lightbox.js" | minify | fingerprint }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+{{ end }}
+{{ end }}
 {{ end }}
