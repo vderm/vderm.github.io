@@ -151,8 +151,13 @@ main.content { flex: 1 1 auto; min-width: 0; }
 }
 .post-gutter-right nav ul { list-style: none; margin: 0; padding: 0; }
 .post-gutter-right nav li { margin-bottom: 0.4rem; }
+/* h3 entries: nested list, indented two mono characters off the h2 above */
+.post-gutter-right nav ul ul { margin-top: 0.4rem; padding-left: 2ch; }
 .post-gutter-right nav a { color: var(--code-kw); }
 .post-gutter-right nav a:hover { background: var(--code-kw); color: var(--bg); }
+/* scrollspy: section currently being read (see assets/js/toc-active.js) */
+.post-gutter-right nav a.active { font-weight: 700; font-style: italic; }
+.post-gutter-right nav a.active:hover { background: var(--code-kw); color: var(--bg); }
 
 .post-body { grid-column: 2; min-width: 0; overflow: visible; }
 .post-body > :first-child { margin-top: 0; }

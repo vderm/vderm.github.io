@@ -23,4 +23,9 @@
     </div>
   </div>
 </article>
+{{ if .Fragments.Headings }}
+{{ with resources.Get "js/toc-active.js" | minify | fingerprint }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+{{ end }}
+{{ end }}
 {{ end }}

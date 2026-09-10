@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Blogs on Vasken Dermardiros</title>
-		<link>http://localhost:1313/blog/</link>
+		<link>https://vderm.github.io/blog/</link>
 		<description>Recent content in Blogs on Vasken Dermardiros</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://vderm.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Human-to-human communication in the age of LLMs</title>
-				<link>http://localhost:1313/blog/2026/human-to-human-communication-in-the-age-of-llms/</link>
+				<link>https://vderm.github.io/blog/2026/human-to-human-communication-in-the-age-of-llms/</link>
 				<pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/blog/2026/human-to-human-communication-in-the-age-of-llms/</guid>
+				<guid>https://vderm.github.io/blog/2026/human-to-human-communication-in-the-age-of-llms/</guid>
 				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;&lt;em&gt;I would have written a shorter letter, but did not have the time&lt;/em&gt;.&amp;rdquo; — &lt;del&gt;Mark Twain&lt;/del&gt; Blaise Pascal&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;What does that mean? It means that to blab around is easy, but to write something complete, concise, where you treat your reader with respect and respect their time takes &lt;strong&gt;effort&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I had read that the best CEOs are amazing writers.&lt;/p&gt;&#xA;&lt;p&gt;Today, in the age of AI, LLMs, ChatGPT, people have their brains on cruise control. Yes, &lt;a href=&#34;https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message&#34;&gt;LinkedIn is slop&lt;/a&gt;, but I have a lot of people writing to me like some &lt;a href=&#34;https://gruhn.me/blog/2026-08-03/&#34;&gt;meat proxy&lt;/a&gt; for ChatGPT.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Blog Demo</title>
-				<link>http://localhost:1313/blog/2026/blog-demo/</link>
+				<link>https://vderm.github.io/blog/2026/blog-demo/</link>
 				<pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/blog/2026/blog-demo/</guid>
+				<guid>https://vderm.github.io/blog/2026/blog-demo/</guid>
 				<description>&lt;p&gt;Well, what&amp;rsquo;s the point of this page? It&amp;rsquo;s mainly to showcase what things look like on the blog. Think of it as my QA.&lt;/p&gt;&#xA;&lt;p&gt;Markdown is fine, but it&amp;rsquo;s a mess too: two ways of declaring headers (&lt;code&gt;# Header&lt;/code&gt; or &lt;code&gt;Header \n =====&lt;/code&gt;, well, let&amp;rsquo;s pretend you can do the newline in your head), I don&amp;rsquo;t get why &lt;code&gt;*&lt;/code&gt; is &lt;em&gt;italic&lt;/em&gt; but there&amp;rsquo;s also the &lt;code&gt;_&lt;/code&gt; as well. I like the &lt;code&gt;_&lt;/code&gt;. We could&amp;rsquo;ve kept the &lt;code&gt;*&lt;/code&gt; for bold instead of &lt;code&gt;**&lt;/code&gt; for bold. And, things get weird if you want the use &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;. Then they added some pseudo-$\LaTeX$ stuff with the &lt;code&gt;$&lt;/code&gt; signs. Whatever. I like text. I would&amp;rsquo;ve used &lt;a href=&#34;https://orgmode.org/features.html&#34;&gt;org-mode&lt;/a&gt; since they&amp;rsquo;re more logical on things (like the &lt;a href=&#34;https://orgmode.org/manual/Emphasis-and-Monospace.html&#34;&gt;italic-bold&lt;/a&gt;), but it doesn&amp;rsquo;t play nice outside of Emacs. And Emacs&lt;label for=&#34;sn-d98082508d82ef116a3e2ef72da527a2-0&#34; class=&#34;sidenote-ref&#34;&gt;&lt;/label&gt;&#xA;&lt;input type=&#34;checkbox&#34; id=&#34;sn-d98082508d82ef116a3e2ef72da527a2-0&#34; class=&#34;sidenote-toggle&#34;&gt;&#xA;&lt;span class=&#34;sidenote&#34;&gt;I wrote my thesis in &lt;a href=&#34;https://www.spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; on a super crappy &lt;a href=&#34;https://www.notebookcheck.net/Chuwi-LapBook-12-3-Celeron-2K-IPS-Laptop-Review.258398.0.html&#34;&gt;Chuwi laptop&lt;/a&gt; that was using a Microsoft Surface screen! Honestly, the constraints made it all work! My stronger PC was running Windows, so it got weird having to work in Linux and Windows.&lt;/span&gt;&#xA; never ran well on Windows.&lt;/p&gt;</description>
 			</item>
 	</channel>
