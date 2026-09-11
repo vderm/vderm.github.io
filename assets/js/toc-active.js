@@ -1,7 +1,10 @@
 // Highlights the "On this page" entry for the section currently being read.
 // No-ops on pages without a TOC (and below 900px, where the TOC is hidden).
 (function () {
-  var nav = document.getElementById('TableOfContents');
+  // Posts get Hugo's generated #TableOfContents; the home page hand-writes
+  // its own list in the same gutter.
+  var nav = document.getElementById('TableOfContents') ||
+            document.querySelector('.post-gutter-right nav');
   if (!nav) return;
 
   var links = {};
