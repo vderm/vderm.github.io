@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://vderm.github.io/tags/backend/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://vderm.github.io/blog/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/blog/2026/caf-kuchen/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/coffee/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/food/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/freelancing/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/frontend/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/</loc>
+    <lastmod>2026-09-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vderm.github.io/blog/2026/human-to-human-communication-in-the-age-of-llms/</loc>
     <lastmod>2026-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vderm.github.io/tags/opinion/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vderm.github.io/</loc>
     <lastmod>2026-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vderm.github.io/blog/2026/blog-demo/</loc>

@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 11 Sep 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://vderm.github.io/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Café &amp; Kuchen</title>
+				<link>https://vderm.github.io/blog/2026/caf-kuchen/</link>
+				<pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://vderm.github.io/blog/2026/caf-kuchen/</guid>
+				<description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+------------------------------------------------------------+&#xA;| PROJECT TAG                                                |&#xA;+------------------------------------------------------------+&#xA;| Project : around_the_world                                 |&#xA;| Started : October 5, 2025                                  |&#xA;| Status  : Mostly done                                      |&#xA;| Repo    : &amp;lt;private&amp;gt;                                        |&#xA;| Site    : https://cafe-and-kuchen.web.app/                 |&#xA;+------------------------------------------------------------+&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;A place to put all our pins of cafés, pastry shops, bakeries, gelaterias and other, along with our photos and text.&lt;/p&gt;&#xA;&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;We travel. We eat. We&amp;rsquo;re actually &lt;a href=&#34;https://en.wikipedia.org/wiki/Culinary_tourism&#34;&gt;gastro-tourists&lt;/a&gt;. When visiting a new city, we decide on the cafés and bakeries we want to go to, and then we find things along the way to see. On &lt;em&gt;your&lt;/em&gt; vacation, &lt;em&gt;you&lt;/em&gt; can decide what to do.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Human-to-human communication in the age of LLMs</title>
 				<link>https://vderm.github.io/blog/2026/human-to-human-communication-in-the-age-of-llms/</link>

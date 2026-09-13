@@ -2,7 +2,7 @@
 title: "Blog Demo"
 date: 2026-09-05
 slug: "blog-demo"
-description: "Page showing what I'm able to do in the blog section."
+description: "Page showing what I'm able to do in the blog section"
 tags: ["template"]
 author: "Vasken Dermardiros"
 math: true
