@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ice Cream Shop Inventory Management &middot; Vasken Dermardiros</title>
+<meta name="description" content="Vasken Dermardiros - building engineering, controls, machine learning.">
+<link rel="canonical" href="http://localhost:1314/blog/2026/ice-cream-shop-inventory-management/">
+<link rel="icon" href="http://localhost:1314/favicon.svg" type="image/svg+xml">
+
+<meta property="og:title" content="Ice Cream Shop Inventory Management">
+<meta property="og:description" content="Vasken Dermardiros - building engineering, controls, machine learning.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1314/blog/2026/ice-cream-shop-inventory-management/">
+<meta property="og:site_name" content="Vasken Dermardiros">
+<meta property="article:published_time" content="2026-09-10T00:00:00Z">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vasken Dermardiros"},"datePublished":"2026-09-10","description":"Vasken Dermardiros - building engineering, controls, machine learning.","headline":"Ice Cream Shop Inventory Management","url":"http://localhost:1314/blog/2026/ice-cream-shop-inventory-management/"}</script>
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.a1ebae0689e1d9087d9472e5ca93c5eec0909a8132795b21350b57236174a657.css" integrity="sha256-oeuuBonh2Qh9lHLlypPF7sCQmoEyeVshNQtXI2F0plc=">
+
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+  <a href="/" class="site-title">Vasken Dermardiros</a>
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/blog/" class="active">Blog</a>
+  </nav>
+</aside>
+
+  <main class="content">
+    
+<article>
+  <h1>Ice Cream Shop Inventory Management <span class="draft-label">Draft</span></h1>
+
+  <div class="post-grid">
+    <div class="post-gutter-left">
+      <div class="byline">Vasken Dermardiros</div>
+      <time datetime="2026-09-10">September 10, 2026</time>
+      
+      <ul class="tags"><li><a href="/tags/freelancing/">#freelancing</a></li></ul>
+      
+    </div>
+
+    <div class="post-body">
+      <pre tabindex="0"><code>------------------------------------------------------------
+ PROJECT TAG
+------------------------------------------------------------
+ Start date: July 2, 2026
+ Status: Prototype
+ Project: inventory_mgmt
+ Repo: &lt;private&gt;
+------------------------------------------------------------
+</code></pre><h2 id="what-is-it">What is it?</h2>
+<p>A way to manage inventory in an ice cream shop.</p>
+<h3 id="background">Background</h3>
+<p>Without getting too much into specifics, I met an ice cream shop owner that was complaining about how a lot of the work their team needs to do ends up being manual or requires someone to remember to do something.</p>
+<p>Let&rsquo;s be more specific.</p>
+<p>The operation is spread over three locations. One location produces for all three. Each location has multiple freezers, each with multiple shelves, where each can have multiple tubs of ice cream. They assign a flavour or two or three per shelf to organize things more easily. They keep a sheet of paper that shows which shelf has which flavour, and they use magnet pins to represent how many tubs of that flavour are in the freezer. If they add a tub, they add a pin; if they remove a tub, they remove a pin. At the end of the day, a worker shares a photo of this sheet with the pins in a company WhatsApp group.</p>
+<p>The following day, the delivery driver looks at these photos and decides how many tubs he needs to dispatch from the main production store to the satellite stores. Picks up the tubs &ndash; removing the magnetic pins to update the inventory &ndash;, places them in the truck, drives to one of the other stores, brings in and places the tub in the freezer, adds a magnetic pin in the correct row of flavours, and that&rsquo;s it. (Of course, the driver might deliver cones, paper cups, and so on as well.) The driver then heads to the next store&hellip;</p>
+<p>Now, in the main store, the tubs are redistributed and counted.
+Since shelves are reserved for specific flavours, we can count what would be the maximum number of tubs for that flavour. So, very simply, from the difference between the maximum and current count, the number of tubs that need to be produced is calculated.</p>
+<p><em>Simple!</em></p>
+<p>Where things break down. The list of flavours change often. Workers forget to take pictures of the sheets with the magnets, which forces the driver to have to visit the satellite stores <em>before</em> going to the main store. When the workers take out a tub to transfer or to bring to the display case in the front-of-the-house, they may forget to take out the oldest tub (<a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">FIFO</a>!). Lastly, since the inventory is done with magnets, there isn&rsquo;t a very detailed history of how much of a flavour was sold, where, and so on.</p>
+<h3 id="needs">Needs</h3>
+<p>The primary need was to have a digital interface where the live inventory is known without needing to ask anyone. There were a bunch of secondary needs as well and that&rsquo;s detailed below.</p>
+<p>A tablet would be used per store and an extra one for production planning. Each tablet shows the contents in the freezers. The tablets are all synched. They are also synched across locations, so an update is instant.</p>
+<p>The app needs to be 99% touch-first. Typing in data must be eliminated. Only the analysis part would be done on a laptop. Everything is logged.</p>
+<p>These needs became clearer after <a href="/blog/2026/ice-cream-shop-inventory-management/#meeting-with-owner-july-8-2026">discussing with the owner more thoroughly</a>.</p>
+<h2 id="prototype-1-google-sheets">Prototype 1: Google Sheets</h2>
+<p>The original prototype is made on Google Sheets because it&rsquo;s the simplest way. All data is live, it&rsquo;s shared across devices, but the interface is still a spreadsheet, and the UI elements are non-existent. The best that was achievable was to use the checkboxes [] as buttons.</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1CWkMgmbJrnojYXuk2sqeIrDHoLcVU8FPLiRPJilcqxo/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1CWkMgmbJrnojYXuk2sqeIrDHoLcVU8FPLiRPJilcqxo/edit?usp=sharing</a></p>
+<p>The app has a few pages:</p>
+<ul>
+<li>Live_View: shows the contents of a specific unit which can be selected. Here, you can add (<code>Add [+]</code>) and remove (<code>Rmw [-]</code>) items and view what&rsquo;s in the freezer.</li>
+<li>Global_Inventory: pivot table showing total quantities per unit.</li>
+<li>Analytics: production and consumption for a given time range.</li>
+<li>Equipment: list of units with their capacities and location.</li>
+<li>Items_Master: produceable recipes and maximum allowed quantity.</li>
+<li>History: timestamped events to track item addition and removal.</li>
+</ul>
+<h3 id="screenshots">Screenshots</h3>
+<figure>
+  <img src="pasted-image-20260705110737.webp" alt=""><figcaption>Prototype 1. Live_View</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705111258.webp" alt=""><figcaption>Prototype 1. Global_Inventory</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705111311.webp" alt=""><figcaption>Prototype 1. Analytics</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705111326.webp" alt=""><figcaption>Prototype 1. Equipment</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705111339.webp" alt=""><figcaption>Prototype 1. Items_Master</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705111353.webp" alt=""><figcaption>Prototype 1. History</figcaption></figure>
+
+<h3 id="limitations">Limitations</h3>
+<p>Good learning experience to see what the backend might need to track and work. The &ldquo;frontend&rdquo; is unuseable and will actually slow people down. It&rsquo;s not at all &ldquo;touch first&rdquo; and the Google Sheets extension that allow for a better UI are expensive and look horrible. Best to do a proper web app with a proper backend.</p>
+<h2 id="prototype-2-v0dev">Prototype 2: v0.dev</h2>
+<p>Dumping the requirements to <a href="https://v0.app/">v0.app</a> produced something a little more useable (until I ran out of credits).</p>
+<p>This version is made to be &ldquo;touch-first&rdquo;. Everything is larger so that it&rsquo;s visible from far. The colours and text can be modified. You see a top section &ldquo;IN TRANSIT&rdquo; if items are being moved. Dragging and dropping those items allows to insert multiple in 2 touches. The location can be locked to not accidentally change it. Then there&rsquo;s a GLOBAL VIEW page where we see all the inventory and is where the production planning takes place. Can also filter by location.</p>
+<p>There&rsquo;s no backend here, this is all mocked in React.</p>
+<h3 id="screenshots-1">Screenshots</h3>
+<figure>
+  <img src="pasted-image-20260705111842.webp" alt=""><figcaption>Prototype 2. Freezer Grid View</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705112111.webp" alt=""><figcaption>Prototype 2. Placing multiple tubs on a shelf</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705112157.webp" alt=""><figcaption>Prototype 2. Remove or transfer out a flavour</figcaption></figure>
+
+<figure>
+  <img src="pasted-image-20260705112224.webp" alt=""><figcaption>Prototype 2. Global View locked showing tubs in all freezers</figcaption></figure>
+
+<p>Notice we have per flavour the number in transit, live (being produced) and planned and the buttons to act on those to the right in a nice Italian flag theme (the owners are Italian).</p>
+<figure>
+  <img src="pasted-image-20260705112953.webp" alt=""><figcaption>Prototype 2. Flavour View</figcaption></figure>
+
+<p>Clicking on the item in Global View shows the location of all the tubs and their production date and batch numbers. FIFO is assumed.</p>
+<p>Prototype 2 assumed that a tub can go anywhere, and as much as we&rsquo;d want a certain flavour to be grouped together, it doesn&rsquo;t need to hold. The app basically becomes the live map of where everything is.</p>
+<h2 id="protoype-3-vuejs">Protoype 3: Vue.js</h2>
+<p>I consider my freelancing work to be a way to learn by doing, I took the opportunity to learn Vue.js. The next prototype was written as a single page application (SPA) because inventory management is really just a data object that&rsquo;s being partially updated and everything that&rsquo;s displayed is really just a representation of that data object.</p>
+<p>The backend would be pure Firebase because we need that for authentication as well. We will keep a <code>db.ts</code> file as a bridge so we can swap backends to FastAPI + PostgreSQL or SQLite if we need to or want to.</p>
+<p>I had started porting the app when I met the owner&hellip;</p>
+<h2 id="meeting-with-owner---july-8-2026">Meeting with Owner - July 8, 2026</h2>
+<p>After meeting the Owner, it became clear that placing tubs loosely anywhere isn&rsquo;t how they do their work.</p>
+<p><em>I have taken many pictures of their operation, but I don&rsquo;t have the authorization to post them here, so I will have to simply describe it.</em></p>
+<p><strong>On the production and planning side</strong>, there&rsquo;s a &ldquo;master list&rdquo; of all the recipes that can be produced. On the left, they mark with an &ldquo;x4&rdquo; to &ldquo;x8&rdquo; to indicate how many carapiners (tubs) to produce. 4 tubs can fit in the <a href="https://carpigiani.com/en/segment/gelato">Carpigiani machine</a> at a time and it&rsquo;s the preferred amount.</p>
+<p><strong>On the freezer side</strong>, they have a list per freezer. Each sheet shows the name of the freezer, the shelves and which flavour goes on that shelf, and what&rsquo;s the maximum amount allowed on that shelf. On the left, there are these magnetic markers and they represent the number of tubs of that flavour in that location. A marker set to the far left signifies &ldquo;reserved&rdquo;. There&rsquo;s no digitized way of having this information: for the other stores, the employees there share a picture of their sheets on the group&rsquo;s Whatsapp chat. If they forget to do so, the deliver man has to first travel to those shops to make the inventory before heading to the main store to get the correct number of tubs.</p>
+<p>Lastly, the main production shop has two zones of freezers: store and storage. Store freezers are closer to the front and is from where the front-of-the-house workers come to get tubs for the display units. The storage are the extra tubs. Those are brought forward at the beginning of the day.</p>
+<p>The main pain points are:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">FIFO</a> on the tubs isn&rsquo;t always observed</li>
+<li>They don&rsquo;t know the inventory without having these photos, and if people forget to upload them, it&rsquo;s extra work to drive to those shops and get a new photo</li>
+<li>Having an inventory and storage capacity, they can plan their deliveries to the other stores and the production to bring the inventory back up</li>
+<li>Reservations aren&rsquo;t tracked well</li>
+<li>When they need to scale recipes, it&rsquo;s done by hand and can lead to mistakes</li>
+</ul>
+<h2 id="prototype-4-vuejs---switch-to-tub-view">Prototype 4: Vue.js - Switch to &ldquo;tub-view&rdquo;</h2>
+<p>Since the location of the tubs are pre-determined, it simplified things. A lot. Next, we would have to flip how the data structure is built to centre it around the &ldquo;life of the tub&rdquo;. This prototype was a big re-write and simplification from the third one. The views are still quite data dense and the UX needs refinement.</p>
+<p>The app is split by plan/production and store/freezer views. We have light/dark mode and multi-lingual support. There&rsquo;s a bit of reactivity if someone wants to check on their phones, but nothing thorough.</p>
+<p>Data is still mocked but the login and hosting is on GCP Firebase.</p>
+<h3 id="plan">Plan</h3>
+<p>The <strong>plan view</strong> shows everything: storage capacity, inventory, # reserved, delivery, storage available to then be able to plan the number of tubs to produce. This is basically the list of flavours that would match what is in production kitchen.</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-8.59.50-AM.webp" alt=""><figcaption>Prototype 4. Plan View</figcaption></figure>
+
+<p>Clicking on the flavour shows a detailed view of where each tub of that flavour are, and the ability to change the date and to discard it. On the right, the recipe with the ability to scale it by ingredient or total weight.<label for="sn-dfe0b0496bcfa975bfb5956d11b85729-12" class="sidenote-ref"></label>
+<input type="checkbox" id="sn-dfe0b0496bcfa975bfb5956d11b85729-12" class="sidenote-toggle">
+<span class="sidenote">Of course, this recipe makes absolutely no sense!</span>
+</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-8.59.59-AM.webp" alt=""><figcaption>Prototype 4. Flavour View</figcaption></figure>
+
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.00.14-AM.webp" alt=""><figcaption>Prototype 4. Flavour View - Recipe scaling example</figcaption></figure>
+
+<p>Clicking on the gear reveals more options.<label for="sn-dfe0b0496bcfa975bfb5956d11b85729-15" class="sidenote-ref"></label>
+<input type="checkbox" id="sn-dfe0b0496bcfa975bfb5956d11b85729-15" class="sidenote-toggle">
+<span class="sidenote">You shouldn&rsquo;t use a Spanish flag for the Catalan language, you will upset some people, but there&rsquo;s no Catalonia flag either, so I settled for a yellow heart.</span>
+</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.00.41-AM.webp" alt=""><figcaption>Prototype 4. Settings Drop-down</figcaption></figure>
+
+<p>Manage flavours is to add/remove active flavours. <em>There&rsquo;s currently no way to create/duplicate a flavour.</em></p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.00.48-AM.webp" alt=""><figcaption>Prototype 4. Manage Flavours</figcaption></figure>
+
+<p>The Auto-plan feature plans:<label for="sn-dfe0b0496bcfa975bfb5956d11b85729-18" class="sidenote-ref"></label>
+<input type="checkbox" id="sn-dfe0b0496bcfa975bfb5956d11b85729-18" class="sidenote-toggle">
+<span class="sidenote">As close as we can get to a self-driving ice cream shop!</span>
+</p>
+<ol>
+<li>How to route the tubs to the other stores</li>
+<li>How to move the tubs from storage forward in the production store</li>
+<li>How many tubs of each flavour to produce to replenish the freezers (rounded up or down in groups of 4)</li>
+</ol>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.00.57-AM.webp" alt=""><figcaption>Prototype 4. Auto-plan</figcaption></figure>
+
+<h3 id="production">Production</h3>
+<p>Production view is a copy of the Plan view with dropped columns. The workers can also punch in if a mix is ready and waiting in the fridge to be churned. The steps can be skipped from planned to produced. A tub is produced by placing a planned tub into a freezer.</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.01.15-AM.webp" alt=""><figcaption>Prototype 4. Production View</figcaption></figure>
+
+<h3 id="freezer">Freezer</h3>
+<p>The freezer view, per store, replicated the paper sheets with magnets. We have the freezers as cards placed as rows representing a zone, and columns for each freezer. Within the card, we have the rows representing shelves and a list of flavours that can go there.</p>
+<p>The flavour row is:</p>
+<p><code>{circle}{flavour}  {date} {numTubs}/{numMaxTubs} {move}{sell}{add}</code></p>
+<p>The <code>date</code> shows the date of the oldest tub.</p>
+<p>Clicking on the flavour gives the same detailed view from the Plan and Production tabs.</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.01.30-AM.webp" alt=""><figcaption>Prototype 4. Freezer View</figcaption></figure>
+
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.02.00-AM.webp" alt=""><figcaption>Prototype 4. Freezer View - Sell tub</figcaption></figure>
+
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.01.55-AM.webp" alt=""><figcaption>Prototype 4. Freezer View - Move tub</figcaption></figure>
+
+<p>The buttons at the top ribbon below the main <code>Plan-Production-Main-*</code> gives detailed info:</p>
+<ul>
+<li><strong>Kitchen</strong>: which are planned or have their mixes ready</li>
+<li><strong>Inbound</strong>: which are in the truck and coming in &ndash; usually for the last two stores</li>
+<li><strong>In hand</strong>: which are being moved within the store</li>
+<li><strong>Transfers</strong>: which need to be placed on the truck and moved to the other stores</li>
+<li><strong>Outbound</strong>: which are currently on the truck</li>
+<li><strong>Reserved</strong>: which are reserved</li>
+</ul>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.02.12-AM.webp" alt=""><figcaption>Prototype 4. Outbound details</figcaption></figure>
+
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.02.24-AM.webp" alt=""><figcaption>Prototype 4. Reservation details</figcaption></figure>
+
+<p>And finally, I&rsquo;ve set this whole project up with a GitHub Action to deploy on merge to <code>main</code>.</p>
+<figure>
+  <img src="Screenshot-2026-09-10-at-9.08.38-AM.webp" alt=""><figcaption>Prototype 4. GHA</figcaption></figure>
+
+
+    </div>
+
+    <div class="post-gutter-right">
+      
+      <div class="toc-label">On this page</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#prototype-1-google-sheets">Prototype 1: Google Sheets</a></li>
+    <li><a href="#prototype-2-v0dev">Prototype 2: v0.dev</a></li>
+    <li><a href="#protoype-3-vuejs">Protoype 3: Vue.js</a></li>
+    <li><a href="#meeting-with-owner---july-8-2026">Meeting with Owner - July 8, 2026</a></li>
+    <li><a href="#prototype-4-vuejs---switch-to-tub-view">Prototype 4: Vue.js - Switch to &ldquo;tub-view&rdquo;</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+  </div>
+</article>
+
+    <footer class="site-footer">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/index.xml">RSS</a>
+  </nav>
+</footer>
+
+  </main>
+</div>
+</body>
+</html>
