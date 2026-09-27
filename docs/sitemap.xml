@@ -2,43 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/backend/</loc>
+    <loc>https://vderm.github.io/tags/android/</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/app/</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/blog/</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/blog/2026/multitrans/</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vderm.github.io/tags/backend/</loc>
     <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://vderm.github.io/tags/freelancing/</loc>
     <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/freelancing/</loc>
+    <loc>https://vderm.github.io/tags/frontend/</loc>
     <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/frontend/</loc>
+    <loc>https://vderm.github.io/blog/2026/gelato-shop-inventory-management/</loc>
     <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/gelato-shop-inventory-management/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2026/caf-kuchen/</loc>
+    <loc>https://vderm.github.io/blog/2026/caf-kuchen/</loc>
     <lastmod>2026-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/coffee/</loc>
+    <loc>https://vderm.github.io/tags/coffee/</loc>
     <lastmod>2026-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/food/</loc>
+    <loc>https://vderm.github.io/tags/food/</loc>
     <lastmod>2026-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/human-to-human-communication-in-the-age-of-llms/</loc>
+    <loc>https://vderm.github.io/blog/2026/human-to-human-communication-in-the-age-of-llms/</loc>
     <lastmod>2026-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/opinion/</loc>
+    <loc>https://vderm.github.io/tags/opinion/</loc>
     <lastmod>2026-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/blog-demo/</loc>
+    <loc>https://vderm.github.io/blog/2026/blog-demo/</loc>
     <lastmod>2026-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/template/</loc>
+    <loc>https://vderm.github.io/tags/template/</loc>
     <lastmod>2026-09-05T00:00:00+00:00</lastmod>
   </url>
 </urlset>

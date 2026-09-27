@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Android on Vasken Dermardiros</title>
+		<link>https://vderm.github.io/tags/android/</link>
+		<description>Recent content in Android on Vasken Dermardiros</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://vderm.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>MultiTrans</title>
+				<link>https://vderm.github.io/blog/2026/multitrans/</link>
+				<pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://vderm.github.io/blog/2026/multitrans/</guid>
+				<description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+------------------------------------------------------------+&#xA;| PROJECT TAG                                                |&#xA;+------------------------------------------------------------+&#xA;| Project : MultiTrans                                       |&#xA;| Started : February 14, 2026                                |&#xA;| Status  : Good enough                                      |&#xA;| Repo    : https://github.com/vderm/MultiTrans              |&#xA;+------------------------------------------------------------+&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I&amp;rsquo;m not good with languages. For example, I don&amp;rsquo;t get why there are genders for objects in French, Spanish, Greek, German, etc. Animals, sure, they have genders. A table? A table is female in French. A table is masculine in German. A table is neuter in Greek.&lt;label for=&#34;sn-bc2edd5f478e1a62eb1d986381bb5207-0&#34; class=&#34;sidenote-ref&#34;&gt;&lt;/label&gt;&#xA;&lt;input type=&#34;checkbox&#34; id=&#34;sn-bc2edd5f478e1a62eb1d986381bb5207-0&#34; class=&#34;sidenote-toggle&#34;&gt;&#xA;&lt;span class=&#34;sidenote&#34;&gt;And this is why I love English and Armenian, there are no genders!&lt;/span&gt;&#xA; Why? Seriously. Why?!?&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
