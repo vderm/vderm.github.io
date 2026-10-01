@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Drawing_machine on Vasken Dermardiros</title>
+		<link>http://localhost:59379/tags/drawing_machine/</link>
+		<description>Recent content in Drawing_machine on Vasken Dermardiros</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:59379/tags/drawing_machine/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Earlier projects</title>
+				<link>http://localhost:59379/blog/2026/earlier-projects/</link>
+				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:59379/blog/2026/earlier-projects/</guid>
+				<description>&lt;h2 id=&#34;about-this-project-catalogue&#34;&gt;About this project catalogue&lt;/h2&gt;&#xA;&lt;p&gt;Here is, in alphabetical order, a collection of some of my work I had completed over time. I&amp;rsquo;ve done other stuff that either, failed so hard that I rather forget about or stuff I&amp;rsquo;ve actually forgotten at this point. Since some of the software files may no longer be functional due to outdated libraries and since AI coding is so good that it&amp;rsquo;s probably easier to just ask Claude to build it again, that I won&amp;rsquo;t link those. If you&amp;rsquo;re interested, contact me.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

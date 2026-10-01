@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Earlier projects (2013-2017): Part 3 &middot; Vasken Dermardiros</title>
+<meta name="description" content="Assortment of projects completed in the distant past">
+<link rel="canonical" href="https://vderm.github.io/blog/2026/earlier-projects-2013-2017-part-3/">
+<link rel="icon" href="https://vderm.github.io/favicon.svg" type="image/svg+xml">
+
+<meta property="og:title" content="Earlier projects (2013-2017): Part 3">
+<meta property="og:description" content="Assortment of projects completed in the distant past">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vderm.github.io/blog/2026/earlier-projects-2013-2017-part-3/">
+<meta property="og:site_name" content="Vasken Dermardiros">
+<meta property="article:published_time" content="2026-10-01T00:00:00Z">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vasken Dermardiros"},"datePublished":"2026-10-01","description":"Assortment of projects completed in the distant past","headline":"Earlier projects (2013-2017): Part 3","url":"https://vderm.github.io/blog/2026/earlier-projects-2013-2017-part-3/"}</script>
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.b7e0c285e04754dca988b6f5a6b70e70feffc1e82d21660d97638da6e04e9046.css" integrity="sha256-t&#43;DCheBHVNypiLb1prcOcP7/wegtIWYNl2ONpuBOkEY=">
+
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+  <a href="/" class="site-title">Vasken Dermardiros</a>
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/blog/" class="active">Blog</a>
+  </nav>
+</aside>
+
+  <main class="content">
+    
+<article>
+  <h1>Earlier projects (2013-2017): Part 3</h1>
+
+  <div class="post-grid">
+    <div class="post-gutter-left">
+      <div class="byline">Vasken Dermardiros</div>
+      <time datetime="2026-10-01">October 1, 2026</time>
+      
+      <ul class="tags"><li><a href="/tags/woodworking/">#woodworking</a></li><li><a href="/tags/prototyping/">#prototyping</a></li><li><a href="/tags/programming/">#programming</a></li><li><a href="/tags/parametric-design/">#parametric-design</a></li><li><a href="/tags/3d-printing/">#3d-printing</a></li><li><a href="/tags/drawing-machine/">#drawing-machine</a></li></ul>
+      
+    </div>
+
+    <div class="post-body">
+      <h2 id="about-this-project-catalogue">About this project catalogue</h2>
+<p>Here is, in alphabetical order, a collection of some of my very past work. I&rsquo;ve built other things during this period but they&rsquo;ve failed so hard that I rather just forget about them! Most of the software files are no longer functional due to outdated libraries and since AI coding is so good that it&rsquo;s probably easier to just ask Claude to build it again, that I decided not to include them. If you&rsquo;re really interested, contact me.</p>
+<p>The main themes are: woodworking, 3d-printing often involving some form of parametric design using Rhino <a href="https://www.rhino3d.com/features/#grasshopper">Grasshopper</a>, electronics often involving the Arduino or ESP32, and drawing machines often involving a form of CNC.</p>
+<p>Had to break this post into three parts:</p>
+<ul>
+<li><a href="/blog/2026/earlier-projects-2013-2017-part-1/">Part 1</a></li>
+<li><a href="/blog/2026/earlier-projects-2013-2017-part-2/">Part 2</a></li>
+<li>Part 3 (this post)</li>
+</ul>
+<h2 id="polargraph">polargraph</h2>
+<p><em>Tags: design, drawing, electronics</em></p>
+<p>Pendulum-based drawing bot/machine. Commands sent via Processing.</p>
+<p>Ever since I stumbled on <a href="https://www.instructables.com/Polargraph-Drawing-Machine/">the polargraph instructables</a>, I wanted one. I know
+my drawing skills are crap and I&rsquo;d want larger prints of some drawings which
+I wouldn&rsquo;t be able to manually reproduce. There are also a lot of line drawings
+I prepare on grasshopper that work well with this setup.</p>
+<p>Build: 2 NEMA 17 el-cheapo stepper motors from ebay, Arduino motor shield v1, an
+Arduino and a somewhat decent power supply to drive the board and motors. On the
+stepper motors, we have a timing belt gear/pulley. The timing belt goes towards
+the pendulum which is an old backup cd, a copper pipe with a screw to hold the
+pen, and bearings. A little servo lifts the pen up and down. The wire connecting
+to the servo should be thinner than what I have now, since it causes a bit of
+interference. The other end of the timing belt goes to a pulley and weights and
+attaches right next to the stepper motors. I did this to have a longer reach
+with the pendulum. If I only had weights hanging from the end of the timing
+belt, they would touch the floor a lot of the times. With the weights on the
+pulley, I have twice the reach (but I had to double the weight to get the same
+tension on the belt; physics, yes!). The weights are random metal bits I had.</p>
+<p>For the drawings, the polargraph has it&rsquo;s program written in Processing. It
+accepts *.svg or g-code files to draw vectors and any other image file to draw
+rasters. For raster files, you can use their methods to fill in basically skewed
+square pixels. I have some examples. Alternatively, you can use other tools
+online to trace the raster as a vector using the travelling-salesman algorithm
+or cross-hatches etc etc.</p>
+<p><img src="polargraph_20170128_115050.webp" alt="">
+<img src="polargraph_20170928_215144.webp" alt="">
+<img src="polargraph_20171006_134710.webp" alt="">
+<img src="polargraph_20171006_134731.webp" alt="">
+<img src="polargraph_20171006_134757.webp" alt="">
+<img src="polargraph_20171006_142858.webp" alt="">
+<img src="polargraph_20171006_143043.webp" alt="">
+<img src="polargraph_drawing.webp" alt="">
+<img src="polargraph_drawing2.webp" alt=""></p>
+<h2 id="pyranometer-mount">pyranometer mount</h2>
+<p><em>Tags: BldgEng, design, lighting</em></p>
+<p>Li-Cor pyranometer mount for Varennes library. Angles match the roof slope and
+bearing. Integrated sight to align with true North.</p>
+<p>I designed this on Autodesk Fusion 360. Drew the diameters of the sensors,
+extruded them, added a thickness, oriented them and made a block where they
+would fit in. The block has a flat side with a sight for alignment and a rounded
+side so that it &ldquo;sticks&rdquo; to the lamp pole where it was to be attached. There&rsquo;s a
+rounded opening too where I can slide in the worm-gear metal tie. Neat things
+you can do with 3D printers. This piece can&rsquo;t be machined.</p>
+<p><img src="pyranometer-mount_20170728_102940_HDR.webp" alt="">
+<img src="pyranometer-mount_20170915_101547_HDR.webp" alt="">
+<img src="pyranometer-mount_20170915_101550.webp" alt="">
+<img src="pyranometer-mount_pyranometer_holder-v20.webp" alt=""></p>
+<h2 id="raspberry-pi-tube-amp-streamer">raspberry pi tube amp streamer</h2>
+<p><em>Tags: audio</em></p>
+<p>Kickstarter tube amp project for the RaspberryPi.</p>
+<p>I had another DAC before this which was also funded on kickstarted (durion
+sound), but I always wanted to hear that <em>tube sound</em> so I jumped on the
+occasion. Compared to the other DAC, I don&rsquo;t really hear the difference. Maybe
+the tube doesn&rsquo;t do much? Or maybe other tube amp designs actually muddle the
+true sound and this one is too neutral. Looks nice and warm.</p>
+<p><img src="raspberry-pi-tube-amp-streamer_20171006_142032.webp" alt=""></p>
+<h2 id="rock-paper-scissor-using-co-adapting-genetic-algorithms-python">rock paper scissor using co-adapting genetic algorithms python</h2>
+<p><em>Tags: software, BldgEng</em></p>
+<p>A game of rock, paper, scissors played between two computer agents evolving over
+time. Genetic algorithms course final project.</p>
+<p>Using genetic algorithms, the two agents learn the opponents strategies and
+exploit them with time. As soon as one side is greatly losing, its mutation rate
+increases to come up with new strategies to win back again.</p>
+<p>More details in the *.pdf. (ask me, and I&rsquo;ll send it to you!)</p>
+<p><img src="rock-paper-scissor-using-co-adapting-genetic-algorithms-python_1461339118_nI_180_term_1_hist_4_RPSfitness.webp" alt="">
+<img src="rock-paper-scissor-using-co-adapting-genetic-algorithms-python_1461339460_nI_360_term_2_hist_4_RPSfitness.webp" alt="">
+<img src="rock-paper-scissor-using-co-adapting-genetic-algorithms-python_1461340622_nI_720_term_4_hist_4_RPSfitness.webp" alt=""></p>
+<h2 id="shadowplay">shadowplay</h2>
+<p><em>Tags: BldgEng, drawing, lighting</em></p>
+<p>Can we determine what a building looks like by observing its shadows? Well, not
+really.</p>
+<p>It&rsquo;s basically a problem where we want to infer the 3D object (the building)
+from 2D data (the shadows). We also have the vector that projects the 3D object
+to the 2D plane. Using the vector and shadow, I extruded the shape outwards. I
+repeated it for different shadows (days/times) and I extruded the building
+outline upwards. I then intersected these shapes to try to recover the original
+3D shape. The results&hellip; it&rsquo;s ugly. In the real world, the shadows would be
+intercepted by other buildings too.</p>
+<p><img src="shadowplay_drawing.webp" alt="">
+<img src="shadowplay_shadowplay.webp" alt="">
+<img src="shadowplay_step1.webp" alt="">
+<img src="shadowplay_step2.webp" alt="">
+<img src="shadowplay_step5.webp" alt=""></p>
+<h2 id="singer-table">singer table</h2>
+<p><em>Tags: woodworking</em></p>
+<p>Old singer table with live edge walnut top.</p>
+<p>The top is actually a single board cut in half and glued together. The dovetail
+key is decorative since the board isn&rsquo;t actually cracked. Danish oil finish.
+Needs to be refinished.</p>
+<p><img src="singer-table_20171006_142239.webp" alt="">
+<img src="singer-table_IMG_20150307_174107.webp" alt="">
+<img src="singer-table_IMG_20150307_174121.webp" alt="">
+<img src="singer-table_IMG_20150311_122853.webp" alt=""></p>
+<h2 id="spice-rack">spice rack</h2>
+<p><em>Tags: woodworking, food</em></p>
+<p>Wooden crate to hold glass jars of spiced within drawer.</p>
+<p><img src="spice-rack_20171014_094254.webp" alt="">
+<img src="spice-rack_20171014_094347.webp" alt=""></p>
+<h2 id="spirograph-and-lissajous">spirograph and lissajous</h2>
+<p><em>Tags: software, drawing</em></p>
+<p>Spirograph and Lissajous pattern generators built in grasshopper. The spirograph
+generator was packaged. I drew out some of the spirograph curves using my <a href="/blog/2026/earlier-projects-2013-2017-part-3/#polargraph">polargraph</a>.</p>
+<p><img src="spirograph-and-lissajous_20171006_142829.webp" alt="">
+<img src="spirograph-and-lissajous_Capture_lissajous.webp" alt="">
+<img src="spirograph-and-lissajous_Capture_spirograph.webp" alt=""></p>
+<h2 id="sudoku-solver-on-excel-basic">sudoku solver on excel basic</h2>
+<p><em>Tags: software</em></p>
+<p>Very basic Sudoku solver on Excel. It basically looks at what are every number
+that fit in a square and if a square has only 1 choice, it inserts that in and
+redoes the look up to see what are the remaining numbers that fit in the
+remaining squares. Repeat until solved.</p>
+<p><em>I&rsquo;ve remade this in Python since and with recursion.</em></p>
+<h2 id="sun-tracker">sun tracker</h2>
+<p><em>Tags: software, lighting</em></p>
+<p>Grasshopper+Firefly+Servos heliostat to simulate a certain day given current
+day. In the grasshopper file, the user sets their current location, bearing and
+time, and then select the location, bearing and time they&rsquo;d want to obtain. If
+possible, the servos will orient the model (that&rsquo;s on top of the servos) so that
+when looking into the model, the daylight will be that of that situation. There
+are models using lamps but the beams of light from lamps are not parallel to
+each other. Solar radiation is. The project can be extended on using larger
+models and more powerful servos or even stepper motors (you&rsquo;ll then need a way
+to &lsquo;home&rsquo; the position).</p>
+<p><img src="sun-tracker_20171018_180555.webp" alt="">
+<img src="sun-tracker_20171018_180603.webp" alt="">
+<img src="sun-tracker_20171018_180606.webp" alt=""></p>
+<h2 id="table-lamp">table lamp</h2>
+<p><em>Tags: design, drawing, lighting</em></p>
+<p>Table lamp with LEDs. This project is linked with the [[*led warmwhite coolwhite amber fade][led warmwhite coolwhite
+amber fade]] program. I also wanted to have an integrated pomodoro. The project is
+still a WIP.</p>
+<p><img src="table-lamp_Mantis-floor-and-desk-lamps-7.webp" alt="">
+<img src="table-lamp_line_lamp.webp" alt=""></p>
+<h2 id="tilt-table">tilt table</h2>
+<p><em>Tags: design</em></p>
+<p>Coffee table that, when tipped over, also acts as a working table. We wanted a
+coffee table in front of the couch. I also wanted an extension to our dinning
+table. Since our space isn&rsquo;t huge, I was thinking of having a coffee table that
+can also act as an extension (different heights). So this idea was born: a table
+that can tip over and be at the right height.</p>
+<p><img src="tilt-table_Capture.webp" alt=""></p>
+<h2 id="tv-router">tv router</h2>
+<p><em>Tags: woodworking</em></p>
+<p>The TV media stand is already crowded. So I stuck the router behind the TV.
+Since it&rsquo;s at a higher position, it can also broadcast better. The screws fit
+into where you would put in the VESA mount. The piece of walnut wood has screws
+that support the router. I varnished the piece, because, I had to.</p>
+<p><img src="tv-router_20171014_094140.webp" alt="">
+<img src="tv-router_20171014_094154.webp" alt="">
+<img src="tv-router_20171014_094205.webp" alt=""></p>
+<h2 id="tv-stand-media">tv stand media</h2>
+<p><em>Tags: woodworking, drawing</em></p>
+<p>Cheap, elegant and utilitarian TV stand and media console. When I first told
+my wife I wanted to do this, she was totally against it, but I promised her it
+would be nice, and for the amount I would be spending, if it weren&rsquo;t nice, I
+wouldn&rsquo;t feel bad throwing it out. The cement blocks are 3ish$ each, the pine
+boards were 15ish$ and then I used a stain and finish on the wood. Only the
+visible sides. Everything holds just by gravity.</p>
+<p><img src="tv-stand-media_20171014_094126.webp" alt="">
+<img src="tv-stand-media_20171014_094118.webp" alt=""></p>
+<h2 id="waffle-table">waffle table</h2>
+<p><em>Tags: woodworking, design</em></p>
+<p>Table inspired by the t-rex wood toys from when I was a kid. You would have the
+spline of the animal and fit in the ribs perpendicularly to it. Why not have a
+table with the same concept? Original definition was done on grasshopper but
+then I discovered Autodesk 123D Make the capability built in. Not sure if the
+program is still available online. Never made it.</p>
+<p><img src="waffle-table_Table.webp" alt="">
+<img src="waffle-table_Table_pieces.webp" alt=""></p>
+<h2 id="wall-print-holder">wall print holder</h2>
+<p><em>Tags: woodworking, drawing</em></p>
+<p>Two thin pieces of wood clamping together with magnets to hold a drawing. An
+extra set can be used on the bottom to hold it better. The wood piece toward the
+wall has holes to secure the whole thing to the wall. I had this idea after
+visiting the Guggenheim museum gift shop in Manhattan.</p>
+<p><img src="wall-print-holder_drawing.webp" alt=""></p>
+<h2 id="weight-holder">weight holder</h2>
+<p><em>Tags: woodworking</em></p>
+<p>Block of wood with holes the same size of the weights to a scale.</p>
+<p><img src="weight-holder_20171006_143127.webp" alt=""></p>
+<h2 id="window-planter">window planter</h2>
+<p><em>Tags: woodworking, drawing, food</em></p>
+<p>Wooden furniture to hold 4 terra cotta pots. Main board in poplar, rest in oak.
+Danish oil finish. I wanted to practice using the chisel.</p>
+<p><img src="window-planter_20171006_141945.webp" alt="">
+<img src="window-planter_20171006_141953.webp" alt="">
+<img src="window-planter_drawing2.webp" alt=""></p>
+
+    </div>
+
+    <div class="post-gutter-right">
+      
+      <div class="toc-label">On this page</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-project-catalogue">About this project catalogue</a></li>
+    <li><a href="#polargraph">polargraph</a></li>
+    <li><a href="#pyranometer-mount">pyranometer mount</a></li>
+    <li><a href="#raspberry-pi-tube-amp-streamer">raspberry pi tube amp streamer</a></li>
+    <li><a href="#rock-paper-scissor-using-co-adapting-genetic-algorithms-python">rock paper scissor using co-adapting genetic algorithms python</a></li>
+    <li><a href="#shadowplay">shadowplay</a></li>
+    <li><a href="#singer-table">singer table</a></li>
+    <li><a href="#spice-rack">spice rack</a></li>
+    <li><a href="#spirograph-and-lissajous">spirograph and lissajous</a></li>
+    <li><a href="#sudoku-solver-on-excel-basic">sudoku solver on excel basic</a></li>
+    <li><a href="#sun-tracker">sun tracker</a></li>
+    <li><a href="#table-lamp">table lamp</a></li>
+    <li><a href="#tilt-table">tilt table</a></li>
+    <li><a href="#tv-router">tv router</a></li>
+    <li><a href="#tv-stand-media">tv stand media</a></li>
+    <li><a href="#waffle-table">waffle table</a></li>
+    <li><a href="#wall-print-holder">wall print holder</a></li>
+    <li><a href="#weight-holder">weight holder</a></li>
+    <li><a href="#window-planter">window planter</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+  </div>
+</article>
+
+
+<script defer src="/js/toc-active.min.f43a91a4c1a5d91c50b67c3834820e08267313b3676beda97fe6e17fb094ee4e.js" integrity="sha256-9DqRpMGl2RxQtnw4NIIOCCZzE7Nna&#43;2pf&#43;bhf7CU7k4="></script>
+
+
+
+
+    <footer class="site-footer">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/index.xml">RSS</a>
+  </nav>
+</footer>
+
+  </main>
+</div>
+</body>
+</html>
